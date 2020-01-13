@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
+//
+// Generated with Bot Builder V4 SDK Template for Visual Studio EchoSkillBot v$templateversion$
 
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace $safeprojectname$.Authentication
         public override Task ValidateClaimsAsync(IList<Claim> claims)
         {
             // if _allowedCallers is null we allow all calls
-            if (_allowedCallers != null && SkillValidation.IsSkillClaim(claims))
+            if (_allowedCallers != null && _allowedCallers.Count > 0 && SkillValidation.IsSkillClaim(claims))
             {
                 // Check that the appId claim in the skill request is in the list of skills configured for this bot.
                 var appId = JwtTokenValidation.GetAppIdFromClaims(claims);

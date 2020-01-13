@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 //
-// Generated with Bot Builder V4 SDK Template for Visual Studio EchoBot v$templateversion$
+// Generated with Bot Builder V4 SDK Template for Visual Studio EchoSkillBot v$templateversion$
 
 using System.Collections.Generic;
 using System.Threading;
@@ -32,7 +32,7 @@ namespace $safeprojectname$.Bots
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            var welcomeText = "Hello and welcome!";
+            var welcomeText = "Hello and welcome to EchoBot!";
             foreach (var member in membersAdded)
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)

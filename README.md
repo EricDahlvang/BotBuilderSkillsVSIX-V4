@@ -1,4 +1,4 @@
-# BotBuilderSkillsVSIX-V4
+# [BotBuilderSkillsVSIX-V4](https://github.com/EricDahlvang/BotBuilderSkillsVSIX-V4/blob/master/BotBuilderSkillsVSIXV4.vsix)
 
 ## Basic Bot Builder Skills Project Templates
 

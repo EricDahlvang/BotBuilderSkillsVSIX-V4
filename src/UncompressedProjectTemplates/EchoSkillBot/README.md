@@ -2,7 +2,7 @@
 
 Bot Framework v4 skills echo sample.
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple skill bot that echos message text back to the calling bot.
+This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple skill bot that echos messages back to the calling bot.
 
 ## Prerequisites
 
@@ -16,9 +16,9 @@ This bot has been created using [Bot Framework](https://dev.botframework.com), i
 ## Key concepts in this sample
 
 The solution includes a parent bot (`EchoBot`) skill and shows how a skill can respond and send messages to a calling bot.
-  - An [AllowedSkillsClaimsValidator](Authentication/AllowedCallersClaimsValidator.cs) class that is used to authenticate that responses sent to the bot are coming from the configured bots only
+  - An [AllowedCallersClaimsValidator](Authentication/AllowedCallersClaimsValidator.cs) class that is used to authenticate that responses sent to it are coming from the configured bots only.  If AllowedCallers in appsettings.json is empty, any RootBot can call the skill.
   - A [Startup](SimpleRootBot/Startup.cs) class that shows how to register the different components for dependency injection
-  - A [sample skill manifest](EchoSkillBot/wwwroot/manifest/echoskillbot-manifest-1.0.json) that describes what the skill can do
+  - A [sample skill manifest](wwwroot/manifest/echoskillbot-manifest-1.0.json) that describes what the skill can do
 
 ## To try this sample
 
@@ -29,7 +29,7 @@ The solution includes a parent bot (`EchoBot`) skill and shows how a skill can r
     ```
 
 - Create a bot registration in the azure portal for the `EchoSkillBot` and update [appsettings.json](appsettings.json) with the `MicrosoftAppId` and `MicrosoftAppPassword` of the new bot registration
-- Separately, create a bot registration in the azure portal for the `RootBot` and update [appsettings.json](appsettings.json) with the `MicrosoftAppId` and `SkillEndpoint` of the new bot registration
+- Separately, create a bot registration in the azure portal for the `RootBot` and update [appsettings.json](appsettings.json) with the `MicrosoftAppId` and `SkillEndpoint` of the new bot registration.  Note: If calling external skills from a locally hosted Root Bot, use the ngrok url for the SkillEndpoint
 - Update the `BotFrameworkSkills` section in [appsettings.json](SimpleRootBot/appsettings.json) with the app ID for the skill you created in the previous step
 - (Optionally) Add the `SimpleRootBot` `MicrosoftAppId` to the `AllowedCallers` list in [appsettings.json](appsettings.json) 
 
@@ -43,7 +43,7 @@ The solution includes a parent bot (`EchoBot`) skill and shows how a skill can r
 
 - Launch Bot Framework Emulator
 - File -> Open Bot
-- Enter a Bot URL of `http://localhost:3978/api/messages`, the `MicrosoftAppId` and `MicrosoftAppPassword` for the `RootBot`
+- Enter a Bot URL of `http://localhost:39783/api/messages`, the `MicrosoftAppId` and `MicrosoftAppPassword` for the `EchoSkillBot`
 
 ## Deploy the bots to Azure
 

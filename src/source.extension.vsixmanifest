@@ -8,7 +8,7 @@
         <License>LICENSE.txt</License>
         <GettingStartedGuide>  https://aka.ms/botbuilder-vsix</GettingStartedGuide>
         <Icon>Template.ico</Icon>
-        <Tags>Bot, Bots, Bot Framework, BotBuilder, NLP, AI, Cognitive Services, Azure, Microsoft</Tags>
+        <Tags>Skills, Bot, Bots, Bot Framework, BotBuilder, NLP, AI, Cognitive Services, Azure, Microsoft</Tags>
     </Metadata>
     <Installation InstalledByMsi="false">
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />

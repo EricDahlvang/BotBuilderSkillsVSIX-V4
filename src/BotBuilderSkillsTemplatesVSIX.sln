@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotBuilderSkillsTemplatesVSIX", "BotBuilderSkillsTemplatesVSIX.csproj", "{487621DC-4481-4C71-91C8-D3A379664363}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Template|Any CPU = Template|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{487621DC-4481-4C71-91C8-D3A379664363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487621DC-4481-4C71-91C8-D3A379664363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487621DC-4481-4C71-91C8-D3A379664363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487621DC-4481-4C71-91C8-D3A379664363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487621DC-4481-4C71-91C8-D3A379664363}.Template|Any CPU.ActiveCfg = Release|Any CPU
+		{487621DC-4481-4C71-91C8-D3A379664363}.Template|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {fc5c6767-16bc-4305-8dfa-5fa67c35a1fb}
+	EndGlobalSection
+EndGlobal

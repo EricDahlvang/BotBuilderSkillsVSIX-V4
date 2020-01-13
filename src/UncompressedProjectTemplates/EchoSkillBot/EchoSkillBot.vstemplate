@@ -1,0 +1,70 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Echo Skill Bot (Bot Framework v4)</Name>
+    <Description>Echo Skill Bot Template for Bot Framework v4.  A good template if you want a skill with a little more than "Hello World!".  Echo Skill Bot simply "echoes" back to the user anything the user says to the bot and contains basic code for ending the skill.
+    </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Bot Framework</ProjectSubType>
+    <SortOrder>1810</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>EchoSkillBot</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <CreateInPlace>true</CreateInPlace>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>EchoSkillBot.png</Icon>
+    <PreviewImage></PreviewImage>
+    <Tags>C#; Windows; Azure; AI; Bots; Skills</Tags>
+    <LanguageTag>csharp</LanguageTag>
+    <PlatformTag>Windows</PlatformTag>
+    <PlatformTag>macOS</PlatformTag>
+    <PlatformTag>Linux</PlatformTag>
+    <ProjectTypeTag>AI Bots</ProjectTypeTag>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$templateversion$" Value="4.7.0"/>
+    </CustomParameters>
+    <Project File="EchoSkillBot.csproj" ReplaceParameters="true">
+      <Folder Name="Authentication" TargetFolderName="Authentication">
+        <ProjectItem ReplaceParameters="true">AllowedCallersClaimsValidator.cs</ProjectItem>
+      </Folder>
+
+      <Folder Name="Bots" TargetFolderName="Bots">
+        <ProjectItem ReplaceParameters="true">EchoBot.cs</ProjectItem>
+      </Folder>
+
+      <Folder Name="controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true">BotController.cs</ProjectItem>
+      </Folder>
+
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="false">launchSettings.json</ProjectItem>
+      </Folder>
+
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="true">default.htm</ProjectItem>
+          <Folder Name="manifest" TargetFolderName="manifest">
+	        <ProjectItem ReplaceParameters="false">echoskillbot-manifest-1.0.json</ProjectItem>
+	      </Folder>
+      </Folder>
+
+      <ProjectItem ReplaceParameters="true">SkillAdapterWithErrorHandler.cs</ProjectItem>
+
+      <ProjectItem ReplaceParameters="false">appsettings.Development.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false">appsettings.json</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">README.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Startup.cs</ProjectItem>
+
+      <Folder Name="DeploymentTemplates" TargetFolderName="DeploymentTemplates">
+        <ProjectItem ReplaceParameters="false">template-with-new-rg.json</ProjectItem>
+        <ProjectItem ReplaceParameters="false">template-with-preexisting-rg.json</ProjectItem>
+        <ProjectItem ReplaceParameters="false">new-rg-parameters.json</ProjectItem>
+        <ProjectItem ReplaceParameters="false">preexisting-rg-parameters.json</ProjectItem>
+      </Folder>
+
+    </Project>
+  </TemplateContent>
+</VSTemplate>

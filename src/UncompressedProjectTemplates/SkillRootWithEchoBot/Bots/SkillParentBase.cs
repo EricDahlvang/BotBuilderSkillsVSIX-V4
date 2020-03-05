@@ -116,8 +116,9 @@ namespace $safeprojectname$.Bots
             await turnContext.SendActivityAsync(MessageFactory.Text(eocActivityMessage), cancellationToken);
 
             // We are back at the root
-            await turnContext.SendActivityAsync(MessageFactory.Text("Back in the root bot. Say \"skill\" and I'll patch you through"), cancellationToken);
-
+            await turnContext.SendActivityAsync(MessageFactory.Text("Back in the root bot."), cancellationToken);
+            await turnContext.SendActivityAsync(MessageFactory.Attachment(GetOptionsAttachment()), cancellationToken);
+            
             // Save conversation state
             await _conversationState.SaveChangesAsync(turnContext, cancellationToken: cancellationToken);
         }

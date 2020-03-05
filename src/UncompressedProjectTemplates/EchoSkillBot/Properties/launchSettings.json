@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:39783",
+      "applicationUrl": "http://localhost:3980",
       "sslPort": 0
     }
   },
@@ -19,7 +19,7 @@
     "EchoSkillBot": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:1205/",
+      "applicationUrl": "https://localhost:3980/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using $safeprojectname$.Authentication;
 using $safeprojectname$.Bots;
+using Microsoft.Extensions.Hosting;
 
 namespace $safeprojectname$
 {
@@ -32,7 +33,7 @@ namespace $safeprojectname$
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddControllers().AddNewtonsoftJson();
 
             // Configure credentials
             services.AddSingleton<ICredentialProvider, ConfigurationCredentialProvider>();
@@ -64,23 +65,24 @@ namespace $safeprojectname$
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
 
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-            app.UseWebSockets();
+            app.UseDefaultFiles()
+            .UseStaticFiles()
+            .UseWebSockets()
+            .UseRouting()
+            .UseAuthorization()
+            .UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
             // app.UseHttpsRedirection();
-            app.UseMvc();
         }
     }
 }

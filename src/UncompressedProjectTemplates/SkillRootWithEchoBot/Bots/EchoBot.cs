@@ -7,12 +7,21 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Integration.AspNet.Core.Skills;
 using Microsoft.Bot.Schema;
+using Microsoft.Extensions.Configuration;
 
 namespace $safeprojectname$.Bots
 {
-    public class EchoBot : ActivityHandler
+    public class EchoBot : SkillParentBase
     {
+        public EchoBot(ConversationState conversationState, SkillsConfiguration skillsConfig, SkillHttpClient skillClient, IConfiguration configuration)
+            : base(conversationState, skillsConfig, skillClient, configuration)
+        {
+        }
+
+        public override string BotName => "Echo Bot";
+
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
             if (turnContext.Activity.Text.Contains("end") || turnContext.Activity.Text.Contains("stop"))
@@ -25,8 +34,10 @@ namespace $safeprojectname$.Bots
             }
             else
             {
-                await turnContext.SendActivityAsync(MessageFactory.Text($"Root with Echo (dotnet) : {turnContext.Activity.Text}"), cancellationToken);
-                await turnContext.SendActivityAsync(MessageFactory.Text("Say \"end\" or \"stop\" and I'll end the conversation and back to the parent."), cancellationToken);
+                await base.OnMessageActivityAsync(turnContext, cancellationToken);
+
+                //await turnContext.SendActivityAsync(MessageFactory.Text($"Root with Echo (dotnet) : {turnContext.Activity.Text}"), cancellationToken);
+                //await turnContext.SendActivityAsync(MessageFactory.Text("Say \"end\" or \"stop\" and I'll end the conversation and back to the parent."), cancellationToken);
             }
         }
 

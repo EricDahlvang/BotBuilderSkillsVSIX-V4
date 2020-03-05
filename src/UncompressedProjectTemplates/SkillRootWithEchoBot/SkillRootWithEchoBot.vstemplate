@@ -33,6 +33,7 @@
       <Folder Name="Bots" TargetFolderName="Bots">
         <ProjectItem ReplaceParameters="true">RootBot.cs</ProjectItem>
 		    <ProjectItem ReplaceParameters="true">EchoBot.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true">SkillParentBase.cs</ProjectItem>
       </Folder>
 
       <Folder Name="controllers" TargetFolderName="Controllers">
@@ -48,7 +49,7 @@
         <ProjectItem ReplaceParameters="true">default.htm</ProjectItem>
       </Folder>
 
-      <ProjectItem ReplaceParameters="true">SkillAdapterWithErrorHandler.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">AdapterWithErrorHandler.cs</ProjectItem>
 
       <ProjectItem ReplaceParameters="false">appsettings.Development.json</ProjectItem>
       <ProjectItem ReplaceParameters="false">appsettings.json</ProjectItem>
@@ -56,7 +57,7 @@
       <ProjectItem ReplaceParameters="true">Program.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">README.md</ProjectItem>
       <ProjectItem ReplaceParameters="true">SkillConversationIdFactory.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true">SkillConfiguration.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">SkillsConfiguration.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Startup.cs</ProjectItem>
 
       <Folder Name="DeploymentTemplates" TargetFolderName="DeploymentTemplates">

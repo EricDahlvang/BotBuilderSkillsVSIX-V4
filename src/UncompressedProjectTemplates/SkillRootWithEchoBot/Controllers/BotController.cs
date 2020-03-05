@@ -23,7 +23,7 @@ namespace $safeprojectname$.Controllers
         private readonly IBot _echoBot;
         private readonly IBot _rootBot;
 
-        public BotController(BotFrameworkHttpAdapter adapter, RootBot rootBot, EchoBot echoBot)
+        public BotController(BotFrameworkHttpAdapter adapter, Bots.RootBot rootBot, Bots.EchoBot echoBot)
         {
             _adapter = adapter;
             _rootBot = rootBot;

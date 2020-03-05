@@ -46,7 +46,7 @@ namespace $safeprojectname$
 
             // Register the Bot Framework Adapter with error handling enabled.
             // Note: some classes use the base BotAdapter so we add an extra registration that pulls the same instance.
-            services.AddSingleton<BotFrameworkHttpAdapter, SkillAdapterWithErrorHandler>();
+            services.AddSingleton<BotFrameworkHttpAdapter, AdapterWithErrorHandler>();
             services.AddSingleton<BotAdapter>(sp => sp.GetService<BotFrameworkHttpAdapter>());
 
             // Register the skills client and skills request handler.
@@ -61,8 +61,8 @@ namespace $safeprojectname$
             services.AddSingleton<ConversationState>();
 
             // Register the bots as a transient. In this case the ASP Controller is expecting an IBot.
-            services.AddTransient<RootBot>();
-            services.AddTransient<EchoBot>();
+            services.AddTransient<Bots.RootBot>();
+            services.AddTransient<Bots.EchoBot>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

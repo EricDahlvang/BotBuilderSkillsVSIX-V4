@@ -9,3 +9,5 @@ Basic templates for creating an EchoSkillBot and SkillRootBot from:
 ## EchoSkillBot [Readme](https://github.com/EricDahlvang/BotBuilderSkillsVSIX-V4/blob/master/src/UncompressedProjectTemplates/EchoSkillBot/README.md)
 
 ## SkillRootBot [Readme](https://github.com/EricDahlvang/BotBuilderSkillsVSIX-V4/blob/master/src/UncompressedProjectTemplates/SkillRootBot/README.md)
+
+## SkillRootWithEchoBot [Readme](https://github.com/EricDahlvang/BotBuilderSkillsVSIX-V4/blob/master/src/UncompressedProjectTemplates/SkillRootWithEchoBot/README.md)

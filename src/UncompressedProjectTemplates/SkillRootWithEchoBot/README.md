@@ -1,6 +1,6 @@
-# SimpleBotToBot Echo Skill
+# Skill Root With Echo Bot
 
-Bot Framework v4 skills echo sample.
+Bot Framework v4 skills root with echo sample.
 
 This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple skill consumer (SimpleRootBot) that sends message activities to a separate skill.  This project also contains an EchoBot, demonstrating this bot consumed as a skill as well as Root Bot.
 

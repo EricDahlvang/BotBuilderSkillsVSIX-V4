@@ -26,8 +26,11 @@ namespace $safeprojectname$
         private readonly SkillHttpClient _skillClient;
         private readonly SkillsConfiguration _skillsConfig;
 
-        public AdapterWithErrorHandler(IConfiguration configuration, ILogger<BotFrameworkHttpAdapter> logger, ConversationState conversationState = null, SkillHttpClient skillClient = null, SkillsConfiguration skillsConfig = null)
-            : base(configuration, logger)
+        public AdapterWithErrorHandler(IConfiguration configuration, ICredentialProvider credentialProvider, 
+                AuthenticationConfiguration authConfig, ILogger<BotFrameworkHttpAdapter> logger, 
+                ConversationState conversationState = null, SkillHttpClient skillClient = null, 
+                SkillsConfiguration skillsConfig = null)
+            : base(configuration, credentialProvider, authConfig, logger: logger)
         {
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _conversationState = conversationState;

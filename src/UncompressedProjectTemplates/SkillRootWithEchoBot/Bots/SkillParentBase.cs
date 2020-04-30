@@ -162,7 +162,7 @@ namespace $safeprojectname$.Bots
 
             // route the activity to the skill
             var oAuthScope = turnContext.TurnState.Get<string>(BotAdapter.OAuthScopeKey);
-            var response = await _skillClient.PostActivityAsync(oAuthScope, _botId, targetSkill, _skillsConfig.SkillHostEndpoint, (Activity)turnContext.Activity, cancellationToken);
+            var response = await _skillClient.PostActivityAsync<object>(oAuthScope, _botId, targetSkill, _skillsConfig.SkillHostEndpoint, (Activity)turnContext.Activity, cancellationToken);
 
             // Check response status
             if (!(response.Status >= 200 && response.Status <= 299))
